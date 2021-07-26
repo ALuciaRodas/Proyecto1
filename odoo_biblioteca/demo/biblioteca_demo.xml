@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data noupdate="1">
+    <record model="biblioteca.book" id="SciFi_1010">
+        <field name="name">Leviathan Wakes</field>
+        <field name="author">James Corey</field>
+        <field name="isbn">12345</field>
+        <field name="description">
+            Humanity has colonized the solar system—Mars, the Moon, the Asteroid Belt and beyond—but the stars are still out of our reach.
+        </field>
+        <field name="state">available</field>
+    </record>
+    
+    <record model="biblioteca.book" id="Novel_2010">
+        <field name="name">The Little Prince</field>
+        <field name="author">Antoine de Saint Exupery</field>
+        <field name="isbn">23456</field>
+        <field name="description">
+            The story follows a young prince who visits various planets in space, including Earth, 
+            and addresses themes of loneliness, friendship, love, and loss
+        </field>
+        <field name="state">borrowed</field>
+    </record>
+
+
+    <record model="biblioteca.book" id="Novel_2011">
+        <field name="name">The Perfum</field>
+        <field name="author">Patrick Süskind</field>
+        <field name="isbn">34567</field>
+        <field name="description">
+           The story follows Jean-Baptiste Grenouille, an unloved orphan in 18th-century France who is born with an exceptional sense of smell, 
+            capable of distinguishing a vast range of scents in the world around him
+        </field>
+        <field name="state">unavailable</field>
+    </record>  
+      
+  </data>
+</odoo>
