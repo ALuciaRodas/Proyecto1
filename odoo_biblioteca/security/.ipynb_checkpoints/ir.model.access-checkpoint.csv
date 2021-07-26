@@ -1,5 +1,5 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-book_admin,book admin,model_biblioteca_book,group_biblioteca_admin,1,1,1,1
-book_read_all,book read all,model_biblioteca_book,,1,0,0,0
-renta_admin,renta admin,model_biblioteca_renta,group_biblioteca_admin,1,1,1,1
-renta_read_all,renta read all,model_biblioteca_renta,,1,0,0,0
+book_admin,book admin,odoo_biblioteca.model_biblioteca_book,group_biblioteca_admin,1,1,1,1
+book_read_all,book read all,odoo_biblioteca.model_biblioteca_book,,1,0,0,0
+renta_admin,renta admin,odoo_biblioteca.model_biblioteca_renta,group_biblioteca_admin,1,1,1,1
+renta_read_all,renta read all,odoo_biblioteca.model_biblioteca_renta,,1,0,0,0
