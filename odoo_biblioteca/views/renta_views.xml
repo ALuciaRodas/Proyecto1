@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="renta_view_form">
+        <field name="name">biblioteca.renta.form</field>
+        <field name="model">biblioteca.renta</field>
+        <field name="arch" type="xml">
+            <form string="Renta form">
+                <sheet>
+                    <h1><field name="name"/></h1>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="renta_view_list">
+        <field name="name">biblioteca.renta.list</field>
+        <field name="model">biblioteca.renta</field>
+        <field name="arch" type="xml">
+            <tree string="Renta list">
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+      
+    <record model="ir.ui.view" id="renta_view_search">
+        <field name="name">biblioteca.renta.search</field>
+        <field name="model">biblioteca.renta</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>      
+  </data>
+</odoo>
