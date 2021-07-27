@@ -21,7 +21,8 @@
     'data': [
         'views/biblioteca_menuitems.xml',
         'views/book_views.xml',
-        'security/ir.model.access.csv'
+        'security/biblioteca_security.xml',
+        'security/ir.model.access.csv',
         
     ],
     

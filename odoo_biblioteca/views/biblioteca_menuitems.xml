@@ -20,7 +20,7 @@
     <menuitem name="Odoo Biblioteca"
               id="menu_biblioteca_sub"
               parent="menu_biblioteca"
-              sequence="1"/>
+              sequence="2"/>
       
     <menuitem name="Books"
               id="menu_biblioteca_books"
