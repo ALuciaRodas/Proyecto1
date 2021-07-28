@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-
+from odoo.exceptions import UserError, ValidationError
 class Book(models.Model):
     
     _name = 'biblioteca.book'
@@ -23,4 +23,10 @@ class Book(models.Model):
     @api.onchange('isbn')
     def _onchange_len_isbn(self):
         if len(self.isbn)>13:
-            raise ValidationError('El ISBN no puede tener más de 13 caracteres')
+            raise ValidationError("El ISBN no puede tener más de 13 caracteres")
+
+            
+    @api.constrains('isbn')
+    def _check_value_isbn(self):
+        if len(self.isbn)>13:
+            raise ValidationError("El ISBN no puede tener más de 13 caracteres")
