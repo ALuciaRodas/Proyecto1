@@ -4,7 +4,7 @@
     'name': 'Odoo Biblioteca',
     'summary': """App para gestion de biblioteca""",
     'description': """
-        Biblioteca module to manage Training:
+        Biblioteca module to manage:
         -Books
         -Clients
     """,
