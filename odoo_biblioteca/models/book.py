@@ -26,11 +26,13 @@ class Book(models.Model):
     
     @api.onchange('isbn')
     def _onchange_len_isbn(self):
-        if len(self.isbn)>13:
-            raise ValidationError("El ISBN no puede tener más de 13 caracteres")
+        if not self.isbn:
+            if len(self.isbn)>13:
+                raise ValidationError("El ISBN no puede tener más de 13 caracteres")
 
             
     @api.constrains('isbn')
     def _check_value_isbn(self):
-        if len(self.isbn)>13:
-            raise ValidationError("El ISBN no puede tener más de 13 caracteres")
+        if not self.isbn:
+            if len(self.isbn)>13:
+                raise ValidationError("El ISBN no puede tener más de 13 caracteres")
