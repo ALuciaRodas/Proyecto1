@@ -20,6 +20,10 @@ class Book(models.Model):
     
     active = fields.Boolean(string='Active', default=True)
     
+    renta_ids = fields.One2many(comodel_name='biblioteca.renta', 
+                                inverse_name='book_id',
+                                string='Rentas')
+    
     @api.onchange('isbn')
     def _onchange_len_isbn(self):
         if len(self.isbn)>13:

@@ -23,6 +23,9 @@
                         <page string="Description">
                             <field name="description"/>
                         </page>
+                        <page string="Rentas">
+                            <field name="renta_ids"/>
+                        </page>
                     </notebook>
                 </sheet>
             </form>

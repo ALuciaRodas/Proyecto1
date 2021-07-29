@@ -8,11 +8,14 @@
             <form string="Renta form">
                 <sheet>
                     <h1><field name="name"/></h1>
-                    <notebook>
-                        <page string="Description">
-                            <field name="description"/>
-                        </page>
-                    </notebook>
+                    <group>
+                        <group>
+                            <field name="book_id"/>
+                        </group>
+                        <group>
+                            <field name="customer_id"/>
+                        </group>
+                    </group>
                 </sheet>
             </form>
         </field>
@@ -30,15 +33,15 @@
         </field>
     </record>
       
-    <record model="ir.ui.view" id="renta_view_search">
+<!--    <record model="ir.ui.view" id="renta_view_search">
         <field name="name">biblioteca.renta.search</field>
         <field name="model">biblioteca.renta</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
-                <field name="description"/>
+                <field name="customer_id"/>
             </search>
         </field>
-    </record>      
+    </record>      -->
   </data>
 </odoo>
