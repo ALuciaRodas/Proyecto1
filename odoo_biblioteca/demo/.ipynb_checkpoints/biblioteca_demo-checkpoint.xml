@@ -33,8 +33,6 @@
             capable of distinguishing a vast range of scents in the world around him
         </field>
         <field name="state">unavailable</field>
-        <field name="renta_ids">
-        </field>
     </record>  
       
   </data>
