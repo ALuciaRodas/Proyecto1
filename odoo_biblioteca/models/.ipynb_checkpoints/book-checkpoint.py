@@ -24,10 +24,10 @@ class Book(models.Model):
                                 inverse_name='book_id',
                                 string='Rentas')
     
-    @api.onchange()
-    def _onchange_len_isbn(self):
-        if len(self.isbn)>13:
-            raise UserError("El ISBN no puede tener más de 13 caracteres")
+#    @api.onchange()
+#    def _onchange_len_isbn(self):
+#        if len(self.isbn)>13:
+#            raise UserError("El ISBN no puede tener más de 13 caracteres")
 
             
     @api.constrains('isbn')

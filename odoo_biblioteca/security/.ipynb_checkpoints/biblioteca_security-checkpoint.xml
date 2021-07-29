@@ -3,4 +3,7 @@
   <record id="group_biblioteca_admin" model="res.groups">
       <field name="name">Biblioteca / admin </field>
   </record>
+  <record id="group_biblioteca_user" model="res.groups">
+      <field name="name">Biblioteca / user </field>
+  </record>
 </odoo>

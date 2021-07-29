@@ -10,21 +10,17 @@
                     <h1><field name="name"/></h1>
                     <group>
                         <group>
-                            <field name="active"/>
-                        </group>
-                        <group>
-                            <field name="state"/>
-                        </group>
-                        <group>
                             <field name="isbn"/>
+                            <field name="author"/>
+                        </group>
+                        <group>
+                            <field name="active"/>                            
+                            <field name="state"/>
                         </group>
                     </group>
                     <notebook>
                         <page string="Description">
                             <field name="description"/>
-                        </page>
-                        <page string="Rentas">
-                            <field name="renta_ids"/>
                         </page>
                     </notebook>
                 </sheet>
@@ -38,10 +34,11 @@
         <field name="model">biblioteca.book</field>
         <field name="arch" type="xml">
             <tree string="Book list">
-                <field name="name"/>
-                <field name="description"/>
-                <field name="state"/>
                 <field name="isbn"/>
+                <field name="name"/>
+                <field name="author"/>
+                <field name="state"/>
+                <field name="active"/>
             </tree>
         </field>
     </record>
@@ -52,7 +49,7 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
-                <field name="description"/>
+                <field name="author"/>
                 <field name="isbn"/>
             </search>
         </field>
