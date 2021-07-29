@@ -9,8 +9,7 @@
             Humanity has colonized the solar system—Mars, the Moon, the Asteroid Belt and beyond—but the stars are still out of our reach.
         </field>
         <field name="state">available</field>
-        <field name="renta_ids">
-        </field>
+
 </record>
     
     <record model="biblioteca.book" id="Novel_2010">
@@ -22,8 +21,6 @@
             and addresses themes of loneliness, friendship, love, and loss
         </field>
         <field name="state">borrowed</field>
-        <field name="renta_ids">
-        </field>
     </record>
 
 
