@@ -14,7 +14,7 @@
     </record>
     <record model="ir.actions.act_window" id="renta_list_action">
         <field name="name">Alquileres</field>
-        <field name="res_model">biblioteca.renta</field>
+        <field name="res_model">biblioteca.rental</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
@@ -23,26 +23,88 @@
         </field>
     </record>
 
-    <menuitem name="Odoo Biblioteca"
-              id="menu_biblioteca"
-              sequence="1"/>
-      
-    <menuitem name="Odoo Biblioteca"
-              id="menu_biblioteca_sub"
-              parent="menu_biblioteca"
-              sequence="2"/>
-      
-    <menuitem name="Books"
-              id="menu_biblioteca_books"
-              parent="menu_biblioteca_sub"
-              sequence="3"
-              action="book_list_action"/>
-      
-    <menuitem name="Rentas"
-              id="menu_biblioteca_rentas"
-              parent="menu_biblioteca_sub"
-              sequence="4"
-              action="renta_list_action"/>
+<menuitem
+            id="menu_root"
+            name="Biblioteca"
+            web_icon="biblioteca,static/description/icon.png"
+    />
+
+    <menuitem
+            id="book_menu"
+            name="Books"
+            parent="biblioteca.menu_root"
+            sequence="10"
+    />
+
+    <menuitem
+            id="book_menu_action"
+            name="Books"
+            parent="biblioteca.book_menu"
+            sequence="10"
+            action="biblioteca.book_action"
+    />
+
+    <menuitem
+            id="copy_menu_action"
+            name="Copies"
+            parent="biblioteca.book_menu"
+            sequence="20"
+            action="biblioteca.copy_action"
+    />
+
+    <menuitem
+            id="author_menu_action"
+            name="Authors"
+            parent="biblioteca.book_menu"
+            sequence="30"
+            action="author_action"
+    />
+
+    <menuitem
+            id="partner_menu"
+            name="Partners"
+            parent="biblioteca.menu_root"
+            sequence="20"
+    />
+
+    <menuitem
+            id="partner_menu_action"
+            name="Partners"
+            parent="biblioteca.partner_menu"
+            sequence="10"
+            action="biblioteca.partner_action"
+    />
+
+    <menuitem
+            id="rental_menu"
+            name="Rentals"
+            parent="biblioteca.menu_root"
+            sequence="30"
+    />
+
+    <menuitem
+            id="rental_menu_action"
+            name="Rentals"
+            parent="biblioteca.rental_menu"
+            sequence="10"
+            action="biblioteca.rental_action"
+    />
+
+
+    <menuitem
+            id="settings_menu"
+            name="Settings"
+            parent="biblioteca.menu_root"
+            sequence="100"
+    />
+
+    <menuitem
+            id="publisher_menu_action"
+            name="Publishers"
+            parent="biblioteca.settings_menu"
+            sequence="10"
+            action="biblioteca.partner_action"
+    />
   
     </data>
 </odoo>
