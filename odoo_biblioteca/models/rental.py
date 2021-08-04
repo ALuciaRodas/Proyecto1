@@ -24,9 +24,9 @@ class Rental(models.Model):
     customer_email = fields.Char(related='customer_id.email')
 
 
-    book_authors = fields.Many2many(related='book_id.author_id')
-    book_edition_date = fields.Date(related='copy_id.edition_date')
-    book_publisher = fields.Many2one(related='copy_id.publisher_id')
+#    book_authors = fields.Many2many(related='book_id.author_id')
+#    book_edition_date = fields.Date(related='copy_id.edition_date')
+ #   book_publisher = fields.Many2one(related='copy_id.publisher_id')
 
     @api.depends('customer_id')
     def _compute_customer_address(self):
