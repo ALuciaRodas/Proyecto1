@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models
 
-class Partner(models.Model):
+class Socios(models.Model):
     _inherit = 'res.partner'
-    _name = 'biblioteca.partner'
+    _name = 'biblioteca.socios'
     
-    _description = 'Partner Info'
+    _description = 'Socios Info'
     
     description = fields.Char(string='Description')
     
