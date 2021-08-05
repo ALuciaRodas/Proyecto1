@@ -33,7 +33,7 @@ class Course(models.Model):
             raise UserError("El precio base no puede ser negativo")
 
             
-    @api.constrains('aditional_fee')
+    @api.constrains('additional_fee')
     def _check_aditional_fee(self):
         for record in self:
             if record.additional_fee<10.00:
