@@ -31,10 +31,12 @@ class Course(models.Model):
     def _onchange_total_price(self):
         if self.base_price<0.00:
             raise UserError("El precio base no puede ser negativo")
-
+            
+        self.total_price = self.base_price +self.additional_fee
             
     @api.constrains('additional_fee')
     def _check_aditional_fee(self):
         for record in self:
             if record.additional_fee<10.00:
                 raise ValidationError('La tarifa adicional no puede ser menor a 10.00: %s' %record.additional_fee)
+                
