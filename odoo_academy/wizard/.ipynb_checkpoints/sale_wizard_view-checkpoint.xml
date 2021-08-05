@@ -23,11 +23,12 @@
               </form>
           </field>
       </record>
-      <act_window id="launch_sale_wizard"
+      <record model="ir.actions.act_window" id="launch_sale_wizard"
                   name="Create sale order"
                   binding_model="academy.session"
                   res_model="academy.sale.wizard"
                   view_mode="form"
-                  target="new"/>
+                  target="new">
+      </record>
     </data>
 </odoo>
