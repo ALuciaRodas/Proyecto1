@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
-    <record model="ir.ui.view" id="seesion_view_form">
+    <record model="ir.ui.view" id="session_view_form">
         <field name="name">academy.session.form</field>
         <field name="model">academy.session</field>
         <field name="arch" type="xml">
