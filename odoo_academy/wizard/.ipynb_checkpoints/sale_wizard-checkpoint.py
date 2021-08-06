@@ -26,7 +26,7 @@ class SaleWizard(models.TransientModel):
     
     def create_sale_orders(self):
         
-        session_product_id = self.env['product.product'].search([('is_session_product','=',True)])
+        session_product_id = self.env['product.product'].search([('id_session_product','=',True)])
         if session_product_id:
             for student in self.student_ids:
                 order_id = self.env['sale.order'].create({
