@@ -28,6 +28,7 @@
         'wizard/sale_wizard_view.xml',
         'security/academy_security.xml',
         'security/ir.model.access.csv',
+        'report/session_report_templates.xml',
     ],
     
     'demo': [
