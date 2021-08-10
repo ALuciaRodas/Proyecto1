@@ -8,6 +8,8 @@ class Course(models.Model):
     
     name = fields.Char(string='Title', required=True)
     
+    code = fields.Char(string='Code', required=True)
+    
     description = fields.Char(string='Description')
     
     level = fields.Selection(string='Level', 
