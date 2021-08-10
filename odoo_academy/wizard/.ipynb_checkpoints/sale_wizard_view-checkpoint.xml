@@ -23,6 +23,7 @@
               </form>
           </field>
       </record>
+  
       <record model="ir.actions.act_window" id="launch_sale_wizard">
                  <field name="name">Create sale order</field>
                   <field name="res_model">academy.sale.wizard</field>

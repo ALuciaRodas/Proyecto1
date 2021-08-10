@@ -21,8 +21,9 @@
                            </p>
                            <strong>Sessions</strong>
                            <t t-foreach="course.session_ids" t-as="session">
-                               <p>Description:
+                               <p>
                                    <a t-attf-href="/academy/{{ slug(session)}}">
+                                       <t t-esc="session.id"/>
                                        <t t-esc="session.name"/>
                                    </a>
                                </p>
