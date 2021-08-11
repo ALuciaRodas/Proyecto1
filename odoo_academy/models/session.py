@@ -50,14 +50,14 @@ class Session(models.Model):
                              required=True)
     
     @api.onchange('course_id', 'code')
-    def _onchange_session_id(self):
-        self.session_id = self.course_id.code + '-' + str(self.code)
+    def _onchange_session_id2(self):
+        self.session_id2 = self.course_id.code + '-' + str(self.code)
     
-    def _compute_session_id(self):
+    def _compute_session_id2(self):
         for record in self:
-            record.session_id = record.course_id.code + '-' +(str(record.code))
+            record.session_id2 = record.course_id.code + '-' +(str(record.code))
     
-    session_id = fields.Char(string='Session Id', readonly=True, compute='_compute_session_id')
+    session_id2 = fields.Char(string='Session Id', readonly=True, compute='_compute_session_id2')
     
     @api.depends('start_date', 'duration')
     def _compute_end_date(self):

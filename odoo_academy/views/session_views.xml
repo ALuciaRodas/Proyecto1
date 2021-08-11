@@ -14,7 +14,7 @@
                             <field name="instructor_id"/>
                             <field name="state"/>
                             <field name="code"/>
-                            <field name="session_id"/>
+                            <field name="session_id2"/>
                         </group>
                         <group>
                             <field name="start_date"/>
@@ -38,7 +38,7 @@
         <field name="arch" type="xml">
             <tree string="Session list">
                 <field name="id"/>
-                <field name="session_id"/>
+                <field name="session_id2"/>
                 <field name="name"/>
                 <field name="instructor_id"/>
             </tree>
