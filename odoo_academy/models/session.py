@@ -41,6 +41,24 @@ class Session(models.Model):
     total_price = fields.Float(string='Total Price',
                               related='course_id.total_price')
     
+    code = fields.Selection(string='Code',
+                             selection=[('dia','Diaria'),
+                                        ('mat','Matutina'),
+                                        ('sab','Sabados'),
+                                        ('vesp','Vespertina')],
+                             default='dia',
+                             required=True)
+    
+    @api.onchange('course_id', 'code')
+    def _onchange_session_id(self):
+        self.session_id = self.course_id.code + '-' + str(self.code)
+    
+    def _compute_session_id(self):
+        for record in self:
+            record.session_id = record.course_id.code + '-' +(str(record.code))
+    
+    session_id = fields.Char(string='Session Id', readonly=True, compute='_compute_session_id')
+    
     @api.depends('start_date', 'duration')
     def _compute_end_date(self):
         for record in self:
